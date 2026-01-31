@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXXTENTATION WIKIPEDIA</title>
+    <style>/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY (ERA CYCLE) ================= */
+body {
+    background: #0b0b0b;
+    color: #e0e0e0;
+    line-height: 1.7;
+    padding: 20px;
+    animation: pageFade 1.8s ease-in, eraCycle 18s infinite;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ================= VHS STATIC OVERLAY ================= */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.02),
+            rgba(255,255,255,0.02) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    pointer-events: none;
+    animation: vhsStatic 0.15s infinite;
+    z-index: 999;
+}
+
+/* ================= TITLE ================= */
+h1 {
+    position: relative;
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+    animation: slideDown 1.2s ease-out, glitchMain 2.5s infinite;
+}
+
+/* ================= BLOOD DRIP ================= */
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    width: 6px;
+    height: 25px;
+    background: darkred;
+    border-radius: 0 0 50% 50%;
+    animation: drip 3s infinite ease-in;
+}
+
+/* ================= DIVIDER ================= */
+hr {
+    border: none;
+    height: 2px;
+    width: 85%;
+    margin: 30px auto;
+    background: red;
+    animation: glow 2s infinite alternate;
+}
+
+/* ================= WIKIPEDIA LAYOUT ================= */
+p {
+    max-width: 980px;
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: justify;
+    color: #d0d0d0;
+
+    animation: fadeUp linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+/* ================= LINKS ================= */
+a {
+    color: #c80000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-shadow: 0 0 10px crimson;
+}
+
+/* ================= IMAGES ================= */
+img {
+    display: block;
+    max-width: 300px;
+    float: right;
+    margin: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 18px rgba(255,0,0,0.3);
+
+    animation: zoomIn linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 50%;
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.06);
+}
+
+/* ================= VIDEOS ================= */
+video {
+    display: block;
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    border: 2px solid red;
+    border-radius: 6px;
+    background: black;
+    animation: pulseBeat 1.1s infinite alternate;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes pageFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Blood drip */
+@keyframes drip {
+    0% { height: 0; opacity: 0; }
+    30% { height: 20px; opacity: 1; }
+    100% { height: 40px; opacity: 0; }
+}
+
+/* Glow */
+@keyframes glow {
+    from { box-shadow: 0 0 6px red; }
+    to { box-shadow: 0 0 18px crimson; }
+}
+
+/* Fade-up */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Zoom */
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* VHS static */
+@keyframes vhsStatic {
+    from { transform: translateY(0); }
+    to { transform: translateY(2px); }
+}
+
+/* Glitch */
+@keyframes glitchMain {
+    0% { text-shadow: none; }
+    20% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    40% { text-shadow: 2px 0 red, -2px 0 cyan; }
+    60% { text-shadow: -1px 0 red, 1px 0 cyan; }
+    100% { text-shadow: none; }
+}
+
+/* Music illusion */
+@keyframes pulseBeat {
+    from { box-shadow: 0 0 10px rgba(255,0,0,0.4); }
+    to { box-shadow: 0 0 30px rgba(255,0,0,0.9); }
+}
+
+/* ================= ALBUM ERA AUTO-CYCLE ================= */
+/* 17 → ? → Skins */
+@keyframes eraCycle {
+    0%   { background: #0b0b0b; }
+    33%  { background: #111111; } /* 17 */
+    66%  { background: #000814; } /* ? */
+    100% { background: #0b0b0b; } /* Skins */
+}
+</style>
+</head>
+<body>
+    <h1>XXXTENTACION</h1> <HR></HR>
+    <P><a href="https://xxxtentacion.com/"> Jahseh Dwayne Ricardo Onfroy</a> (January 23, 1998 – June 18, 2018), known professionally as XXXTentacion,[c] was an American rapper, singer-songwriter, and record producer.[12][13] Though a controversial figure due to his widely publicized legal troubles, XXXTentacion gained a cult following among his young fan base during his short career with his depression- and alienation-themed music. Critics and audiences often credit him for his musical versatility, with his music exploring emo, trap, trap metal, nu metal, indie rock, lo-fi, hip-hop, R&B, and punk rock. He was considered to be a leading figure in the establishment of the emo rap and SoundCloud rap genres, which garnered mainstream attention during the mid-to-late 2010s.</P>
+    <P>Born in Plantation, Florida, Onfroy spent most of his childhood in Lauderhill. He began writing music after being released from a juvenile detention center and soon started his music career on SoundCloud in 2013, employing styles and techniques that were unconventional in rap music such as distortion and heavy guitar-backed instrumentals, drawing inspiration from third-wave emo and grunge. In 2014, he formed the underground collective Members Only and, alongside other members of the collective, soon became a popular figure in SoundCloud rap, a trap music scene that takes elements of lo-fi music and harsh 808s.[15] Onfroy gained mainstream attention with his 2016 single <a href="https://www.youtube.com/watch?v=wJGcwEv7838">"Look at Me!"</a></a>. His debut studio album, 17 (2017), peaked at number two on the Billboard 200, while his second album, ? (2018), debuted atop the chart; both received triple platinum certifications by the Recording Industry Association of America (RIAA). The latter's lead single, "Sad!", posthumously reached number one on the Billboard Hot 100 and had amassed more than 1.2 billion views on YouTube and 2.1 billion streams on Spotify by February 2024, in addition to having received diamond certification by the RIAA in August 2021.[17][18][19][20]</P>
+    <P>Onfroy faced a variety of legal issues throughout his lifetime, most notably the controversy that arose from the battery charges that were levied against him in 2016.[21][22] His history of legal issues and alleged violence has been described by some as defining his legacy, while others have criticized the media's portrayal of him, arguing that his perceived improvements in character later in life have made his legacy into a tale of the power of second chances and redemption.[23][24][25][26]</P>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Xxxtentacion_%28cropped%29.jpg" alt="">
+<img src="https://external-preview.redd.it/vAQ6A_ZpF2IEs8Qw2N1NZrO-2uld6VVl01Y85qmWHSM.jpeg?width=140&height=140&crop=140:140,smart&auto=webp&s=1dbaa480ca1e182a2266a3f89410da284c3d3254" alt="" height="1000"> 
+<img src="https://xxxtentacion.com/cdn/shop/files/x-x.png" alt=""> <img src="https://xxxtentacion.com/cdn/shop/files/IMG_2019.jpg" alt="">
+<video src="https://xxxtentacion.com/cdn/shop/videos/c/vp/5d86c7823409429b831a15bc563bceb2/5d86c7823409429b831a15bc563bceb2.HD-1080p-2.5Mbps-33954324.mp4?v=0"></video>
+<video src="xxxtentacion.mp4">look at me</video>
+</body>
+</html>
