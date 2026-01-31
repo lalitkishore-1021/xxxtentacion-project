@@ -197,6 +197,10 @@ video {
 }
 </style>
 </head>
+    <audio id="bg-music" loop>
+    <source src="sad.mp3" type="audio/mpeg">
+</audio>
+
 <body>
     <header>Created by : BALAGA LALIT KISHORE</header>
     <h1>XXXTENTACION</h1> <HR></HR>
@@ -220,7 +224,23 @@ This website is a space where I share my projects, skills, certifications, and l
 © 2026 | Educational Project | All rights belong to their respective owners.</dev>
         <dev><b>Created by </b>Balaga Lalit Kishore</dev>
     </fotter>
+    <script>
+const music = document.getElementById("bg-music");
+music.volume = 0.4;
+
+function startMusic() {
+    music.play();
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("touchstart", startMusic);
+}
+
+// Play when user clicks or touches anywhere
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
+</script>
+
 </body>
 </html>
+
 
 
